@@ -257,7 +257,7 @@ def test_8mic():
             #############################################
             #if (direction[2]==1):
             #    print('Warnning')
-            ttt(data)
+            ttt(dat)
             
             
             
