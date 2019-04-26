@@ -241,7 +241,7 @@ def test_8mic():
                 break
 
     pixel_ring.off()
-    return raw, en_speech
+    return 1, en_speech
 
 
 if __name__ == '__main__':
