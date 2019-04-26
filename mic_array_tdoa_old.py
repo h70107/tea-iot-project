@@ -224,7 +224,7 @@ def test_8mic():
             #    print('Warnning')
             
             sum=np.zeros((1,2000))
-            print(sum.)
+            print(sum.shape)
             #sum=sum+chunk[0::8]
             
 
