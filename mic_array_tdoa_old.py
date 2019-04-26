@@ -229,7 +229,7 @@ def test_8mic():
             
             ############################################
             pixel_ring.set_direction(direction[0])
-            print(frames)
+            print(1)
             print('@ {:.2f}'.format(direction[0]),'@ {:.2f}'.format(direction[1]))
            #  chunk = chunk / (2**15)
            #  chunk.shape = -1, 8
