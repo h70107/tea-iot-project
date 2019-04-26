@@ -229,6 +229,7 @@ def test_8mic():
             
             ############################################
             pixel_ring.set_direction(direction[0])
+            print(frames)
             print('@ {:.2f}'.format(direction[0]),'@ {:.2f}'.format(direction[1]))
            #  chunk = chunk / (2**15)
            #  chunk.shape = -1, 8
@@ -241,7 +242,7 @@ def test_8mic():
                 break
 
     pixel_ring.off()
-    return 1, en_speech
+    return raw, en_speech
 
 
 if __name__ == '__main__':
