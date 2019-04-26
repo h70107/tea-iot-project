@@ -223,8 +223,7 @@ def test_8mic():
             #if (direction[2]==1):
             #    print('Warnning')
             
-            T
-            print('Time :',time)
+            
             
             
             
