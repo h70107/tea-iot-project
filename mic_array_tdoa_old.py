@@ -223,35 +223,11 @@ def test_8mic():
             #if (direction[2]==1):
             #    print('Warnning')
             
+            sum=np.zeros((1,2000))
+            sum=sum+chunk[0::8]
             
-            print(chunk[0::8].shape)
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+           
             ############################################
             pixel_ring.set_direction(direction[0])
             
