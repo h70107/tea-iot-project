@@ -216,6 +216,7 @@ def test_8mic():
     en_speech = np.zeros((1,))
     raw = np.zeros((1, 8))
     with MicArray(16000, 8, 16000 / 8)  as mic:
+        i=0
         for frames in mic.read_chunks():
             chunk = np.fromstring(frames, dtype='int16')
             direction = mic.get_direction(chunk)
@@ -224,9 +225,15 @@ def test_8mic():
             #    print('Warnning')
             yfft=np.fft.fft(chunk[0::8])
             sum=np.zeros((1,2000))
+            i=i+1
             #print(sum.shape)
             #print(chunk[0::8].shape)
             sum=sum+yfft
+            mean=sum/i
+            for j in range(2000):
+                if abs(sum[j]-yfft[j])>5:
+                    break
+                
             print(sum.shape)
 
            
