@@ -246,7 +246,7 @@ def test_8mic():
             print(np.min(dif))
             print(dif.shape) 
             #print(yfft.shape) 
-            print(np.mean(mean)) 
+            #print(np.mean(mean)) 
            
             ############################################
             pixel_ring.set_direction(direction[0])
