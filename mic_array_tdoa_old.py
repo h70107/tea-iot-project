@@ -240,7 +240,9 @@ def test_8mic():
               #      continue
             
             print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-            print(abs(mean[1]-yfft[1]))
+            #print(abs(mean[1]-yfft[1]))
+            print(mean.shape) 
+            print(yfft.shape) 
             print(np.mean(mean)) 
            
             ############################################
