@@ -227,7 +227,7 @@ def test_8mic():
             yfft=abs(np.fft.fft(chunk[0::8]))
             
             i=i+1
-            #print(sum.shape)
+            
             #print(chunk[0::8].shape)
             sum=sum+yfft
             mean=sum/i
@@ -240,9 +240,9 @@ def test_8mic():
               #      continue
             
             print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-            #print(abs(mean[1]-yfft[1]))
-            print(mean.shape) 
-            print(yfft.shape) 
+            print(abs(mean[1]-yfft[1]))
+            #print(mean.shape) 
+            #print(yfft.shape) 
             print(np.mean(mean)) 
            
             ############################################
