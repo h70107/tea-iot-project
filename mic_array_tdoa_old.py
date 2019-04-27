@@ -217,14 +217,15 @@ def test_8mic():
     raw = np.zeros((1, 8))
     with MicArray(16000, 8, 16000 / 8)  as mic:
         i=0
+        sum=np.zeros((1,2000))
         for frames in mic.read_chunks():
             chunk = np.fromstring(frames, dtype='int16')
             direction = mic.get_direction(chunk)
             #############################################
             #if (direction[2]==1):
             #    print('Warnning')
-            yfft=np.fft.fft(chunk[0::8])
-            sum=np.zeros((1,2000))
+            yfft=abs(np.fft.fft(chunk[0::8]))
+            
             i=i+1
             #print(sum.shape)
             #print(chunk[0::8].shape)
