@@ -234,7 +234,7 @@ def test_8mic():
             #    if abs(sum[j]-yfft[j])>5:
             #        break
                 
-            print(mean.shape)
+            print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
            
             ############################################
