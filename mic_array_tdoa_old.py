@@ -244,7 +244,7 @@ def test_8mic():
             print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
             print(np.max(dif))
             if np.max(dif)>60000:
-                print("\033[0;37;40m\tnoise\033[0m")
+                print("\033[0;31;40m\tnoise\033[0m")
             #print(np.min(dif))
             print(dif.shape) 
             #print(yfft.shape) 
