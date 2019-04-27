@@ -217,7 +217,7 @@ def test_8mic():
     raw = np.zeros((1, 8))
     with MicArray(16000, 8, 16000 / 8)  as mic:
         i=0
-        sum=np.zeros((1,2000))
+        sum=np.zeros((2000,))
         for frames in mic.read_chunks():
             chunk = np.fromstring(frames, dtype='int16')
             direction = mic.get_direction(chunk)
