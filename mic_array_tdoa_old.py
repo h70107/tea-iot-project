@@ -230,11 +230,11 @@ def test_8mic():
             #print(chunk[0::8].shape)
             sum=sum+yfft
             mean=sum/i
-            for j in range(2000):
-                if abs(sum[j]-yfft[j])>5:
-                    break
+            #for j in range(2000):
+            #    if abs(sum[j]-yfft[j])>5:
+            #        break
                 
-            print(sum.shape)
+            print(mean.shape)
 
            
             ############################################
