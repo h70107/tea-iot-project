@@ -222,11 +222,11 @@ def test_8mic():
             #############################################
             #if (direction[2]==1):
             #    print('Warnning')
-            
+            yfft=np.fft.fft(chunk[0::8])
             sum=np.zeros((1,2000))
             #print(sum.shape)
             #print(chunk[0::8].shape)
-            sum=sum+chunk[0::8]
+            sum=sum+yfft
             print(sum.shape)
 
            
