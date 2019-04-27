@@ -230,13 +230,13 @@ def test_8mic():
             #print(chunk[0::8].shape)
             sum=sum+yfft
             mean=sum/i
-            for j in range(2000):
-                if abs(sum[j]-yfft[j])>5:
-                    print("moise")
-                    break
-                
+            #for j in range(2000):
+             #   if abs(sum[j]-yfft[j])>5:
+              #      print("moise")
+               #     break
+            
             print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-
+            print(np.mean(mean)) 
            
             ############################################
             pixel_ring.set_direction(direction[0])
