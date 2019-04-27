@@ -231,17 +231,20 @@ def test_8mic():
             #print(chunk[0::8].shape)
             sum=sum+yfft
             mean=sum/i
+            dif=abs(mean-yfft)
+            
             
             #for j in range(2000):
             #    if abs(mean[j]-yfft[j])>5:
             #        print("moise")
-             #       break
-             #   else:
-              #      continue
+            #       break
+            #   else:
+            #      continue
             
             print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-            print(abs(mean[1]-yfft[1]))
-            #print(mean.shape) 
+            print(np.max(dif))
+            print(np.min(dif))
+            print(dif.shape) 
             #print(yfft.shape) 
             print(np.mean(mean)) 
            
