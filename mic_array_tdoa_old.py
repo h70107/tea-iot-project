@@ -232,7 +232,7 @@ def test_8mic():
             sum=sum+yfft
             mean=sum/i
             for j in range(2000):
-                if abs(sum[j]-yfft[j])>5:
+                if abs(mean[j]-yfft[j])>5:
                     print("moise")
                     break
                 else:
