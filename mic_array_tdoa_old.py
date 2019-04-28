@@ -225,15 +225,16 @@ def test_8mic():
             #if (direction[2]==1):
             #    print('Warnning')
             yfft=abs(np.fft.fft(chunk[0::8]))
-            
-            i=i+1
-            
-            #print(chunk[0::8].shape)
-            sum=sum+yfft
-            mean=sum/i
             dif=abs(mean-yfft)
-            
-            
+            if np.max(dif)>60000:
+                print("\033[0;31;40m\tnoise\033[0m")
+            else:
+                i=i+1
+                sum=sum+yfft
+                mean=sum/i
+                
+            #print(chunk[0::8].shape)
+
             #for j in range(2000):
             #    if abs(mean[j]-yfft[j])>5:
             #        print("moise")
@@ -243,8 +244,7 @@ def test_8mic():
             
             print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
             print(np.max(dif))
-            if np.max(dif)>60000:
-                print("\033[0;31;40m\tnoise\033[0m")
+            
             #print(np.min(dif))
             print(dif.shape) 
             #print(yfft.shape) 
