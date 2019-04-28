@@ -225,12 +225,15 @@ def test_8mic():
             #if (direction[2]==1):
             #    print('Warnning')
             yfft=abs(np.fft.fft(chunk[0::8]))
+            i=i+1
+            sum=sum+yfft
+            mean=sum/i
             dif=abs(mean-yfft)
-            if np.max(dif)>60000 & i>24:
+            if np.max(dif)>60000 :
                 print("\033[0;31;40m\tnoise\033[0m")
-            else:
-                i=i+1
-                sum=sum+yfft
+           
+                i=i-1
+                sum=sum-yfft
                 mean=sum/i
                 
             #print(chunk[0::8].shape)
