@@ -226,7 +226,7 @@ def test_8mic():
             #    print('Warnning')
             yfft=abs(np.fft.fft(chunk[0::8]))
             dif=abs(mean-yfft)
-            if np.max(dif)>60000:
+            if np.max(dif)>60000 & i>24:
                 print("\033[0;31;40m\tnoise\033[0m")
             else:
                 i=i+1
